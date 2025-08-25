@@ -41,5 +41,6 @@ jobs:
 
     - name: Run Django tests with pytest
       run: |
+        cd django_project/mysite
         python manage.py migrate
         pytest -v
