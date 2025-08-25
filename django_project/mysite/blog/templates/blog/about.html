@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me | Mohamed Rashid</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: linear-gradient(to right, #111, #000, #222);
+  margin: 0;
+  scroll-behavior: smooth;
+}
+a { text-decoration: none; color: inherit; transition: color 0.3s; }
+a:hover { color: #3b82f6; }
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(0,0,0,0.8);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  position: relative;
+}
+nav h1 { font-size: 24px; font-weight: bold; }
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+nav ul li a {
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+nav ul li a:hover { background-color: rgba(59, 130, 246, 0.2); }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Sections */
+.section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 50px 20px; }
+.section h2 { font-size: 48px; margin-bottom: 20px; }
+.section h2 span { color: #3b82f6; }
+.section p { font-size: 20px; color: #aaa; margin-bottom: 30px; max-width: 600px; }
+.card { background-color: #222; padding: 30px; border-radius: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.5); transition: transform 0.3s, box-shadow 0.3s; max-width: 400px; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 8px 12px rgba(0,0,0,0.6); }
+.card h3 { font-size: 28px; margin-bottom: 15px; }
+.card p { color: #aaa; margin-bottom: 20px; }
+.links a { display: inline-block; margin: 8px; padding: 10px 16px; color: white; background-color: #3b82f6; border-radius: 999px; transition: background 0.3s, transform 0.3s; }
+.links a:hover { background-color: #2563eb; transform: scale(1.05); }
+footer { background-color: rgba(0,0,0,0.6); text-align: center; padding: 20px 0; color: #888; }
+
+/* Responsive */
+@media(max-width:768px) {
+  nav ul { display: none; flex-direction: column; gap: 10px; background: rgba(0,0,0,0.9); position: absolute; top: 60px; right: 20px; padding: 10px 20px; border-radius: 10px; }
+  nav ul.show { display: flex; }
+  .hamburger { display: block; }
+  .section h2 { font-size: 36px; }
+  .section p { font-size: 18px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <h1><a href="#hero"></a>Mohamed Rashid</h1>
+  <span class="hamburger" onclick="toggleMenu()">☰</span>
+  <ul id="menu">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- About Section -->
+<section class="section">
+  <h2>About <span>Me</span></h2>
+  <p>Hello! I’m Mohamed Rashid, a beginner Web Developer passionate about creating modern and user-friendly websites. I enjoy learning new technologies, building projects, and sharing knowledge with others.</p>
+  <div class="card">
+    <h3>Skills & Interests</h3>
+    <p>🌱 Learning Django, React, and JavaScript <br> 💻 Web Development <br> 🎨 UI/UX Design <br> 📚 Continuous Learning</p>
+    <div class="links">
+      <a href="/">🌐 Home</a>
+      <a href="https://github.com/rashid-ai24" target="_blank">🐙 GitHub</a>
+      <a href="mailto:moh.rashid20006@gmail.com">📧 Email</a>
+    </div>
+  </div>
+</section>
+
+<script>
+function toggleMenu() {
+  document.getElementById('menu').classList.toggle('show');
+}
+</script>
+
+</body>
+</html>

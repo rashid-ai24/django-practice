@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohamed Rashid | Portfolio</title>
+<style>
+/* Basic Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: linear-gradient(to right, #111, #000, #222);
+  scroll-behavior: smooth;
+}
+
+a { text-decoration: none; color: inherit; transition: color 0.3s; }
+a:hover { color: #3b82f6; }
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: rgba(0,0,0,0.8);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  position: relative;
+}
+nav h1 { font-size: 24px; font-weight: bold; }
+nav ul { display: flex; gap: 30px; list-style: none; }
+nav ul li a {
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+nav ul li a:hover { background-color: rgba(59, 130, 246, 0.2); }
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  padding-top: 100px; /* space for navbar */
+}
+.hero h2 { font-size: 48px; margin-bottom: 20px; }
+.hero h2 span { color: #3b82f6; }
+.hero p { font-size: 20px; color: #aaa; margin-bottom: 30px; }
+.hero a {
+  background-color: #3b82f6;
+  padding: 12px 30px;
+  border-radius: 999px;
+  font-size: 18px;
+  color: #fff;
+  display: inline-block;
+}
+.hero a:hover { background-color: #2563eb; }
+
+/* Projects Section */
+.projects {
+  padding: 100px 50px;
+  background-color: #111;
+  text-align: center;
+}
+.projects h3 { font-size: 36px; margin-bottom: 50px; }
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+.project-card {
+  background-color: #222;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover { transform: translateY(-5px); box-shadow: 0 8px 12px rgba(0,0,0,0.6); }
+.project-card h4 { font-size: 22px; margin-bottom: 10px; }
+.project-card p { color: #aaa; }
+
+/* Contact Section */
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+}
+.contact h3 { font-size: 36px; margin-bottom: 20px; }
+.contact p { color: #aaa; margin-bottom: 30px; }
+.contact a {
+  background-color: #3b82f6;
+  padding: 12px 30px;
+  border-radius: 999px;
+  font-size: 18px;
+  color: #fff;
+  display: inline-block;
+}
+.contact a:hover { background-color: #2563eb; }
+
+/* Footer */
+footer {
+  background-color: rgba(0,0,0,0.6);
+  text-align: center;
+  padding: 20px 0;
+  color: #888;
+}
+
+/* Responsive */
+@media(max-width:768px) {
+  nav ul { display: none; flex-direction: column; gap: 10px; background: rgba(0,0,0,0.9); position: absolute; top: 60px; right: 20px; padding: 10px 20px; border-radius: 10px; }
+  nav ul.show { display: flex; }
+  .hamburger { display: block; }
+  .hero h2 { font-size: 36px; }
+  .hero p { font-size: 18px; }
+  .projects { padding: 80px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <h1><a href="#hero"></a>Mohamed Rashid</h1>
+  <span class="hamburger" onclick="toggleMenu()">☰</span>
+  <ul id="menu">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero" class="hero">
+  <h2>Hi, I’m <span>Mohamed Rashid</span></h2>
+  <p>A passionate Web Developer creating modern and user-friendly websites.</p>
+  <a href="#projects">View My Work</a>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects">
+  <h3>Projects</h3>
+  <div class="project-grid">
+    <div class="project-card">
+      <h4>Project One</h4>
+      <p>Short description of the project. Built with Django & React.</p>
+    </div>
+    <div class="project-card">
+      <h4>Project Two</h4>
+      <p>Short description of the project. Built with CSS & JavaScript.</p>
+    </div>
+    <div class="project-card">
+      <h4>Project Three</h4>
+      <p>Short description of the project. Built with Django REST API.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <h3>Get in Touch</h3>
+  <p>Feel free to reach out for collaborations or just a friendly hello 👋</p>
+  <a href="mailto:moh.rashid20006@gmail.com">Email Me</a>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Mohamed Rashid. All Rights Reserved.</p>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('menu').classList.toggle('show');
+}
+</script>
+
+</body>
+</html>
