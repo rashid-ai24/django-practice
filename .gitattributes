@@ -1,0 +1,19 @@
+# All text files are normalized
+* text=auto
+
+# Python files: always use LF
+*.py text eol=lf
+
+# HTML templates: always use LF
+*.html text eol=lf
+
+# CSS and JS files: LF
+*.css text eol=lf
+*.js text eol=lf
+
+# Optional: images and binaries, don't touch
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
