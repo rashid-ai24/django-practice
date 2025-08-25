@@ -1,4 +1,0 @@
-Django>=4.2,<5.0
-pytest
-pytest-django
-flake8
